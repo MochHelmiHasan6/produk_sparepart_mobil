@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "64359003444",
+    "project_id": "sparepartmobil-337aa",
+    "storage_bucket": "sparepartmobil-337aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64359003444:android:6138cdcfbe2820d75ca161",
+        "android_client_info": {
+          "package_name": "com.example.sparepart_mobil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64359003444-rhhf17shgn3ojbs286ot390rg602lqa9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sparepart_mobil",
+            "certificate_hash": "a6637b07a04fa35e1723e065ce4198976154a7c9"
+          }
+        },
+        {
+          "client_id": "64359003444-a1vc4296408ft4gmufhdar5df1jb8hoe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAurycGtd57fxf_yR_tzZvryI6L8EAcaK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64359003444-a1vc4296408ft4gmufhdar5df1jb8hoe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
