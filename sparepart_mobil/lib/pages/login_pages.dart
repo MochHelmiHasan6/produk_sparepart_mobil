@@ -31,9 +31,9 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(height: 50),
-                Image.network(
-                  'https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.jayaproductions.com%2F&psig=AOvVaw1DqwsTPp9Km_DwgB0seWxr&ust=1622011644501000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPiRnbqe5PACFQAAAAAdAAAAABAE',
-                ),
+                // Image.network(
+                //   'https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.jayaproductions.com%2F&psig=AOvVaw1DqwsTPp9Km_DwgB0seWxr&ust=1622011644501000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPiRnbqe5PACFQAAAAAdAAAAABAE',
+                // ),
                 SizedBox(height: 25),
                 Container(
                   child: Form(
@@ -173,10 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) {
-                                            return FirstScreen(
-                                                email: email,
-                                                name: name,
-                                                image: image);
+                                            return FirstScreen();
                                           },
                                         ),
                                       );
@@ -254,7 +251,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage("assets/google-logo.png"), height: 35.0),
+            // Image(image: AssetImage("assets/google-logo.png"), height: 35.0),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
