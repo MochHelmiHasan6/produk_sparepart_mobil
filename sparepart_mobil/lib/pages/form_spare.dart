@@ -65,6 +65,7 @@ class FormSpareState extends State<FormSpare> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Harga',
+                  hintText: 'Rupiah',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),
                   ),
@@ -102,10 +103,7 @@ class FormSpareState extends State<FormSpare> {
                     child: RaisedButton(
                       color: Theme.of(context).primaryColorDark,
                       textColor: Theme.of(context).primaryColorLight,
-                      child: Text(
-                        'Save',
-                        textScaleFactor: 1.5,
-                      ),
+                      child: Icon(Icons.save_rounded),
                       onPressed: () {
                         if (nama == null) {
                           // tambah data
@@ -134,10 +132,7 @@ class FormSpareState extends State<FormSpare> {
                     child: RaisedButton(
                       color: Theme.of(context).primaryColorDark,
                       textColor: Theme.of(context).primaryColorLight,
-                      child: Text(
-                        'Cancel',
-                        textScaleFactor: 1.5,
-                      ),
+                      child: Icon(Icons.cancel_rounded),
                       onPressed: () {
                         Navigator.pop(context);
                       },

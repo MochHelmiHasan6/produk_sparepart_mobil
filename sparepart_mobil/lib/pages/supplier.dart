@@ -31,7 +31,7 @@ class SupplierState extends State<Supplier> {
             child: FloatingActionButton(
               child: Icon(Icons.add),
               onPressed: () async {
-                var item =
+                var sup =
                     await navigateToEntryForm(context, null, null, null, null);
               },
             ),
@@ -57,7 +57,7 @@ class SupplierState extends State<Supplier> {
   StreamBuilder fireListView() {
     TextStyle textStyle = Theme.of(context).textTheme.headline5;
     return StreamBuilder<QuerySnapshot>(
-      stream: Database.readItems(),
+      stream: Database.readSup(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return Container(

@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-final CollectionReference _mainCollection = _firestore.collection('notes');
+final CollectionReference _mainCollection = _firestore.collection('spare');
+final CollectionReference _secondCollection = _firestore.collection('supplier');
 
 class Database {
-  static String userUid;
+  // static String userUid;
 
   static Future<void> addItem({
     String nama,
@@ -12,7 +13,7 @@ class Database {
     int stok,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userUid).collection('items').doc();
+        _mainCollection.doc('spare').collection('spare').doc();
 
     Map<String, dynamic> data = <String, dynamic>{
       "nama": nama,
@@ -33,7 +34,7 @@ class Database {
     String docId,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userUid).collection('items').doc(docId);
+        _mainCollection.doc('spare').collection('spare').doc(docId);
 
     Map<String, dynamic> data = <String, dynamic>{
       "nama": nama,
@@ -49,7 +50,7 @@ class Database {
 
   static Stream<QuerySnapshot> readItems() {
     CollectionReference notesItemCollection =
-        _mainCollection.doc(userUid).collection('items');
+        _mainCollection.doc('spare').collection('spare');
 
     return notesItemCollection.snapshots();
   }
@@ -58,7 +59,7 @@ class Database {
     String docId,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userUid).collection('items').doc(docId);
+        _mainCollection.doc('spare').collection('spare').doc(docId);
 
     await documentReferencer
         .delete()
@@ -72,7 +73,7 @@ class Database {
     String notelp,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userUid).collection('supplier').doc();
+        _secondCollection.doc('supplier').collection('supplier').doc();
 
     Map<String, dynamic> data = <String, dynamic>{
       "namaSup": namaSup,
@@ -93,7 +94,7 @@ class Database {
     String docId,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userUid).collection('supplier').doc(docId);
+        _secondCollection.doc('supplier').collection('supplier').doc(docId);
 
     Map<String, dynamic> data = <String, dynamic>{
       "namaSup": namaSup,
@@ -108,17 +109,17 @@ class Database {
   }
 
   static Stream<QuerySnapshot> readSup() {
-    CollectionReference notesItemCollection =
-        _mainCollection.doc(userUid).collection('supplier');
+    CollectionReference supplierCollection =
+        _secondCollection.doc('supplier').collection('supplier');
 
-    return notesItemCollection.snapshots();
+    return supplierCollection.snapshots();
   }
 
   static Future<void> deleteSup({
     String docId,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userUid).collection('supplier').doc(docId);
+        _secondCollection.doc('supplier').collection('supplier').doc(docId);
 
     await documentReferencer
         .delete()
